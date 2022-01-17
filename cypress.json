@@ -1,8 +1,9 @@
 {
+    "baseUrl": "https://www.saucedemo.com",
     "viewportWidth": 1200,
     "viewportHeight": 800,
     "testFiles": "**/*.feature",
     "chromeWebSecurity": false,
     "waitForAnimations": false,
     "animationDistanceThreshold": 50
-  }
+}
