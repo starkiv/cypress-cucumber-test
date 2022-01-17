@@ -5,7 +5,7 @@ When('I sort the items by High to Low', () => {
     inventoryData.sortByHighToLow();
 });
   
-When('I select cheapest and costlies items to basket', () => {
+When('I select cheapest and costliest items to basket', () => {
     inventoryData.addToCartCheapestAndCostliest();
 });
   
