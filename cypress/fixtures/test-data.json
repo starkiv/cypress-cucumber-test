@@ -1,0 +1,12 @@
+{
+  "firstName": "Yurii",
+  "lastName": "Starkiv",
+  "postCode": "UK-UA",
+  "password": "secret_sauce",
+  "userNames": {
+    "standard": "standard_user",
+    "locked": "locked_out_user",
+    "problem": "problem_user",
+    "performance": "performance_glitch_user"
+  }
+}
