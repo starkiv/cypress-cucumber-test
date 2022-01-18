@@ -3,7 +3,6 @@ module.exports = {
     checkoutPageTwo: 'checkout-step-two.html',
     checkoutComplete: 'checkout-complete.html',
     elements: {
-        checkoutButton: '[data-test="checkout"]',
         firstNameField: '[data-test="firstName"]',
         lastNameField: '[data-test="lastName"]',
         postCodeField: '[data-test="postalCode"]',
@@ -11,11 +10,14 @@ module.exports = {
         finishButton: '[data-test="finish"]',
     },
 
-    goToCheckout: function () {
-        cy.get(this.elements.checkoutButton).click();
-        cy.url().should('include', this.checkoutPageOne);
-    },
-
+    /**
+     * Filling checkout form on the first checkout page 
+     * by using params
+     * @param firstName - user's first name
+     * @param lastName - user's last name
+     * @param postCode - user home's postal code
+     * And assert that user on the second checkout page
+     */
     checkoutForm: function (firstName, lastName, postCode) {
         cy.get(this.elements.firstNameField).type(firstName);
         cy.get(this.elements.lastNameField).type(lastName);
@@ -24,6 +26,10 @@ module.exports = {
         cy.url().should('include', this.checkoutPageTwo);
     },
   
+    /**
+     * Click on the finish button and assert 
+     * that user is on the complete page
+     */
     finishCheckout: function () {
         cy.get(this.elements.finishButton).click();
         cy.url().should('include', this.checkoutComplete);
