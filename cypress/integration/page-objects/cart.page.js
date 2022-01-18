@@ -7,7 +7,7 @@ module.exports = {
     },
   
     /**
-     * Click on heckout button and assert 
+     * Click on checkout button and assert 
      * that user is on the first checkout page
      */
     checkout: function () {
